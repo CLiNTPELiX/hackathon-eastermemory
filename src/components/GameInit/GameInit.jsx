@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import { Container, Col, Row, Button, ButtonGroup } from 'reactstrap'
-import GameMain from '../GameMain/GameMain'
-import './GameInit.css'
+import React, { Component } from 'react';
+import { Container, Col, Row, Button, ButtonGroup } from 'reactstrap';
+import GameMain from '../GameMain/GameMain';
+import './GameInit.css';
 
 export default class GameInit extends Component {
   constructor(props) {
@@ -24,7 +24,7 @@ export default class GameInit extends Component {
   }
   async submitForm(e) {
     e.preventDefault();
-    await this.setState({ playerName: this.state.playerInput, isPlayerReady: true })
+    await this.setState({ playerName: this.state.playerInput, isPlayerReady: true });
   }
 
   onRadioBtnClick(rSelected) {
@@ -33,7 +33,7 @@ export default class GameInit extends Component {
 
   render() {
     if (this.state.isPlayerReady === true) {
-      return <GameMain playerName={this.state.playerName} difficultyLevel={this.state.rSelected} />
+      return <GameMain playerName={this.state.playerName} difficultyLevel={this.state.rSelected} />;
     }
     return (
       <div className="myBackground">
@@ -86,6 +86,6 @@ export default class GameInit extends Component {
           </Row>
         </Container>
       </div>
-    )
+    );
   }
 }
