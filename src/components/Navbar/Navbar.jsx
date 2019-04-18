@@ -1,7 +1,7 @@
 import React from 'react';
 import './Navbar.css';
 
-export default function Navbar() {
+export default function Navbar(props) {
   return (
     <div>
       <body>
@@ -9,7 +9,7 @@ export default function Navbar() {
     <span class="navbar-toggle" id="js-navbar-toggle">
             <i class="fas fa-bars"></i>
         </span>
-    <a href="logo" className="logo">Easter Memory</a>
+    <a href="logo" className="logo">{props.text}</a>
   </nav>
 </body>
     </div>

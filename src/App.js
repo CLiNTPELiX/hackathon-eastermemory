@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
 import './App.css';
-import GameInit from './components/GameInit/GameInit';
+import GameInit from './components/GameInit/GameInit'
+import GameMain from './components/GameMain/GameMain'
+import { Switch, Route } from 'react-router-dom'
 import Footer from './components/Footer/Footer';
-import Navbar from './components/Navbar/Navbar';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-      <Navbar />
-        <GameInit />  
-        <Footer />     
+        <Switch>
+          <Route path='/play' component={GameMain} />
+          <Route path='/' component={GameInit} />
+        </Switch>
+        <Footer />
       </div>
+
+
     );
   }
 }
