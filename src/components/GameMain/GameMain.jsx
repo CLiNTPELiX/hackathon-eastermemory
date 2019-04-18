@@ -12,7 +12,7 @@ export default class GameMain extends Component{
     return (
       <Container>
         <Row>
-
+      
           <Col>
             <h1>{this.props.playerName}</h1>
           </Col>
