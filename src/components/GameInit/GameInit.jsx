@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Container, Col, Row, Button, ButtonGroup } from 'reactstrap'
+import GameMain from '../GameMain/GameMain'
 import './GameInit.css'
 
 export default class GameInit extends Component {
@@ -9,7 +10,8 @@ export default class GameInit extends Component {
       placeholderText: 'Player',
       rSelected: 1,
       playerInput: '',
-      playerName: ''
+      playerName: '',
+      isPlayerReady: false
     };
     this.onRadioBtnClick = this.onRadioBtnClick.bind(this);
     this.onChange = this.onChange.bind(this);
@@ -23,7 +25,6 @@ export default class GameInit extends Component {
   submitForm(e) {
     e.preventDefault();
     this.setState({ playerName: this.state.playerInput })
-    console.log("Titre changé.")
   }
 
   onRadioBtnClick(rSelected) {
@@ -73,7 +74,13 @@ export default class GameInit extends Component {
                     <input
                       type="submit"
                       value="OK"
-                      onClick={() => alert('Im a dirty JS alert.')}
+                      onClick={() => {
+                        this.setState({ isPlayerReady: true })
+
+                        return <GameMain playerName={this.state.playerName} difficultyLevel={this.state.rSelected} />
+                        
+                      }
+                      }
                     />
                   </div>
                 </fieldset>
