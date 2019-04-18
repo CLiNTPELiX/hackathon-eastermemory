@@ -11,12 +11,20 @@ export default class GameMain extends Component{
   }
   render() {
     return (
-      <Container-fluide>
-        <Navbar />
-        <h1>{this.props.playerName}</h1>
+      <Container>
+        <Row>
+          <Navbar />
+          <Col>
+            <h1>{this.props.playerName}</h1>
+          </Col>
 
-        <h1>{this.props.difficultyLevel}</h1>
-      </Container-fluide>
+          <Col>
+            <h1>{this.props.difficultyLevel}</h1>
+          </Col>
+
+          <h1>{this.props.difficultyLevel}</h1>
+        </Row>
+      </Container> 
     );
   }
 }

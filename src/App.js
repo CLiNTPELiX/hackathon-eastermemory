@@ -13,7 +13,6 @@ class App extends Component {
           <Route path='/play' component={GameMain} />
           <Route path='/' component={GameInit} />
         </Switch>
-        
         <Footer />
       </div>
     );
