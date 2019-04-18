@@ -9,7 +9,9 @@ export default function Navbar(props) {
           <span class="navbar-toggle" id="js-navbar-toggle">
             <i class="fas fa-bars"></i>
           </span>
-          <a href="logo" className="logo">{props.text}</a>
+          <p className="logo">Easter Memory</p>
+          <p className="name">{props.text}</p>
+          <p className="number">Difficulty :{props.number}</p>
         </nav>
       </body>
     </div>
