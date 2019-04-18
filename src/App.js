@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import GameInit from './components/GameInit/GameInit'
-import GameMain from './components/GameMain/GameMain'
+import GameMain from './components/GameMain/'
 import { Switch, Route } from 'react-router-dom'
 
 class App extends Component {
@@ -13,8 +13,6 @@ class App extends Component {
           <Route path='/' component={GameInit} />
         </Switch>
       </div>
-
-
     );
   }
 }
