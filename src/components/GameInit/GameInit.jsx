@@ -22,9 +22,9 @@ export default class GameInit extends Component {
       [e.target.name]: e.target.value,
     });
   }
-  submitForm(e) {
+  async submitForm(e) {
     e.preventDefault();
-    this.setState({ playerName: this.state.playerInput })
+    await this.setState({ playerName: this.state.playerInput, isPlayerReady: true })
   }
 
   onRadioBtnClick(rSelected) {
@@ -32,6 +32,9 @@ export default class GameInit extends Component {
   }
 
   render() {
+    if (this.state.isPlayerReady === true) {
+      return <GameMain playerName={this.state.playerName} difficultyLevel={this.state.rSelected} />
+    }
     return (
       <div className="myBackground">
         <Container >
@@ -74,13 +77,6 @@ export default class GameInit extends Component {
                     <input
                       type="submit"
                       value="OK"
-                      onClick={() => {
-                        this.setState({ isPlayerReady: true })
-
-                        return <GameMain playerName={this.state.playerName} difficultyLevel={this.state.rSelected} />
-                        
-                      }
-                      }
                     />
                   </div>
                 </fieldset>
