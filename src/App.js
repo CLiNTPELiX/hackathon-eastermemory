@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
+<<<<<<< HEAD
+=======
+import GameInit from './components/GameInit/GameInit';
+import GameMain from './components/GameMain/GameMain';
+import { Switch, Route } from 'react-router-dom';
+import Footer from './components/Footer/Footer';
+>>>>>>> 6e8f6f64858b56c317f0229c9a23eb08b7ecc20c
 
 class App extends Component {
 
@@ -24,6 +31,7 @@ class App extends Component {
     if (this.state.isLoading === true) { return <p>Eggs Array Loading ...</p> }
 
     return (
+<<<<<<< HEAD
       this.state.eggs.data.map((egg, idx) => {
         console.log('Line thirty one');
         return (
@@ -34,6 +42,16 @@ class App extends Component {
         );
       })
     )
+=======
+      <div className="App">
+        <Switch>
+          <Route path='/play' component={GameMain} />
+          <Route path='/' component={GameInit} />
+        </Switch>
+        <Footer />
+      </div>
+    );
+>>>>>>> 6e8f6f64858b56c317f0229c9a23eb08b7ecc20c
   }
 }
 
