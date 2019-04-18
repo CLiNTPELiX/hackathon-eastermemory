@@ -4,9 +4,9 @@ import './Footer.css';
 export default function Footer() {
   return (
     <div className="footer">
-      <Footer>>
-
-      </Footer>
+      <p>>
+        Un composant ne peut pas s'appeler lui-même :-)
+      </p>
       
     </div>
   );
