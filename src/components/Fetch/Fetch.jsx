@@ -32,24 +32,21 @@ export default class Fetch extends Component {
 
     for (let i = 0; i < cardsNumber; i++){
       if (this.state.isFiltered === false) {
-        eggsArrIReallyWant.push(this.state.eggs.data[Math.floor(Math.random() * this.state.eggs.data.length)].image);
-        console.log('in for loop l34 (getArrayofX method)');
+        const randomImage = this.state.eggs.data[Math.floor(Math.random() * this.state.eggs.data.length)].image;
+        eggsArrIReallyWant.push(randomImage);
       }
     }
-
-    this.setState({eggsIWant: eggsArrIReallyWant, isFiltered : true});
+    console.log(eggsArrIReallyWant + ' = eggsArrIReallyWant inside getArr method');
+    this.setState({eggsIWant: [...eggsArrIReallyWant], isFiltered : true});
     console.log('I run l19 func and eggsIrlywant.length = ' + eggsArrIReallyWant.length);
     console.log(this.state.isFiltered);
 
     this.makePairs(eggsArrIReallyWant);
   }
 
-  componentDidMount = () => {
-    axios.get('http://easteregg.wildcodeschool.fr/api/eggs')
-      .then( (data) => {
-        this.setState({ eggs: data, loading: false });
-      })
-      .catch(error => console.log(error));
+  componentDidMount = async () => {
+    const response = await axios.get('http://easteregg.wildcodeschool.fr/api/eggs');
+    this.setState({ eggs: response, loading: false });
     this.getArrayOfX(this.state.difficultyLevel);
   }
 

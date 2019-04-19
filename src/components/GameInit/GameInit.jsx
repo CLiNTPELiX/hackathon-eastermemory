@@ -47,7 +47,7 @@ export default class GameInit extends Component {
             </Col>
 
             <Col xs='12'>
-              <h3 className="gameInitText">Choose your level (default is 1)</h3>
+              <h3 className="gameInitText">Choose your level <em>(default is 1)</em></h3>
             </Col>
 
             <Col xs='12'>
@@ -60,7 +60,7 @@ export default class GameInit extends Component {
             </Col>
 
             <Col xs='12'>
-              <h3 className="gameInitText">Enter your name (default is Player)</h3>
+              <h3 className="gameInitText">Enter your name <em>(default is Player)</em></h3>
             </Col>
 
             <Col xs='12'>
@@ -79,6 +79,7 @@ export default class GameInit extends Component {
                     <input
                       type="submit"
                       value="OK"
+                      className="myOkButton"
                     />
                   </div>
                 </fieldset>
