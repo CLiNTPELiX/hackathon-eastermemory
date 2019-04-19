@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container, Col, Row, Button, ButtonGroup } from 'reactstrap';
 import GameMain from '../GameMain/GameMain';
 import './GameInit.css';
+// import EasterEgg from '../EasterEgg/EasterEgg';
 
 export default class GameInit extends Component {
   constructor(props) {
@@ -32,6 +33,7 @@ export default class GameInit extends Component {
   }
 
   render() {
+    
     if (this.state.isPlayerReady === true) {
       return <GameMain playerName={this.state.playerName} difficultyLevel={this.state.rSelected} />;
     }
@@ -41,7 +43,7 @@ export default class GameInit extends Component {
           <Row >
 
             <Col xs='12'>
-              <h1 className="mainTitle">Welcome</h1>
+              <h1 onDoubleClick={() => this.handleClick} className="mainTitle">Welcome</h1>
             </Col>
 
             <Col xs='12'>
