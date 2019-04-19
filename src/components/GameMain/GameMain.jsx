@@ -10,9 +10,9 @@ export default class GameMain extends Component {
   }
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Navbar text={this.props.playerName} number={this.props.difficultyLevel} />
-      </div>
+      </React.Fragment>
     );
   }
 }
