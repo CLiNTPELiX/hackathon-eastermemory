@@ -44,7 +44,7 @@ export default class GameInit extends Component {
     }
     return (
       <div className="myBackground">
-        <Container >
+        <Container className="colorFont">
           <Row >
 
             <Col xs='12'>
