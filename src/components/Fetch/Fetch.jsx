@@ -61,9 +61,9 @@ export default class Fetch extends Component {
     return (
       console.log(this.state.eggsIWant + ' want arr'),
       console.log(this.state.duplicatedEggs + ' duplicated arr'),
-      this.state.eggs.data.map((egg) => {
+      this.state.eggs.data.map((egg, idx) => {
         // return;
-        return <img src={egg.image} alt='noAlternative'></img>;
+        return <img key={idx} src={egg.image} width="20" height="20" alt='noAlternative'></img>;
       })
     );
   }
