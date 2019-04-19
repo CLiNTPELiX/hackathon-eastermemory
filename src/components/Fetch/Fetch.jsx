@@ -9,30 +9,31 @@ export default class Fetch extends Component {
       eggs: { data: [{ id: 1337, name: 'Dan', image: 'http://myimage' }] },
       loading: true,
       eggsIWant:[],
-      eggsIReallyWant:[],
+      duplicatedEggs: [],
       isFiltered: false,
       difficultyLevel: 3
     };
     
   }
 
-  getArrayOfX(){
+  getArrayOfX(difficultyLevel){
     let cardsNumber = 0;
-    if (this.state.difficultyLevel === 1) {
+    if (difficultyLevel === 1) {
       cardsNumber = 8;
-    } else if (this.state.difficultyLevel === 2) {
+    } else if (difficultyLevel === 2) {
       cardsNumber = 16;
-    } else if (this.state.difficultyLevel === 3) {
+    } else if (difficultyLevel === 3) {
       cardsNumber = 32;
     }
+    let eggsIReallyWant = [];
 
     for (let i = 0; i < cardsNumber; i++){
       if (this.state.isFiltered === false) {
-        this.state.eggsIWant.push(this.state.eggs.data[Math.floor(Math.random() * this.state.eggs.data.length)].image);
+        eggsIReallyWant.push(this.state.eggs.data[Math.floor(Math.random() * this.state.eggs.data.length)].image);
       }
     }
-    this.setState({eggsIReallyWant: this.state.eggsIWant, isFiltered : true});
-    console.log('I run l15 func');
+    this.setState({eggsIWant: eggsIReallyWant, isFiltered : true});
+    console.log('I run l15 func and eggsIrlywant.length = ' + eggsIReallyWant.length);
   }
 
   componentDidMount = () => {
@@ -40,6 +41,15 @@ export default class Fetch extends Component {
       .then(data => this.setState({ eggs: data }))
       .catch(error => console.log(error));
     this.getArrayOfX(1);
+    this.makePairs(this.state.eggsIWant);
+  }
+
+  makePairs(array){
+    let duplicatedArray = [];
+    for (let i = 0; i < array.length; i++){
+      duplicatedArray.push(array[i], array[i]);
+    }
+    this.setState({duplicatedEggs : duplicatedArray});
   }
 
   render() {
@@ -49,10 +59,9 @@ export default class Fetch extends Component {
       }, 500);
       return <Spinner color="primary" />;
     }
-
     return (
-      console.log(this.state.eggsIWant + ' want'),
-      console.log(this.state.eggsIReallyWant + ' really want'),
+      console.log(this.state.eggsIWant + ' want arr'),
+      console.log(this.state.duplicatedEggs + ' duplicated arr'),
       this.state.eggs.data.map((egg) => {
         // return;
         return <img src={egg.image} alt='noAlternative'></img>;
