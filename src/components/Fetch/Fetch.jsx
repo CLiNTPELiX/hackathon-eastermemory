@@ -55,8 +55,22 @@ export default class Fetch extends Component {
     for (let i = 0; i < array.length; i++){
       duplicatedArray.push(array[i], array[i]);
     }
+    this.shuffle(duplicatedArray);
     this.setState({duplicatedEggs : duplicatedArray});
     console.log('I ran func makePairs.');
+  }
+
+  shuffle(arra1) {
+    var ctr = arra1.length, temp, index;
+
+    while (ctr > 0) {
+      index = Math.floor(Math.random() * ctr);
+      ctr--;
+      temp = arra1[ctr];
+      arra1[ctr] = arra1[index];
+      arra1[index] = temp;
+    }
+    return arra1;
   }
 
   render() {
@@ -66,8 +80,8 @@ export default class Fetch extends Component {
     
     return (
     
-      this.state.eggs.data.map((egg) => {
-        return <Col xs='2'><Cards image={egg.image}/></Col>; 
+      this.state.duplicatedEggs.map((egg) => {
+        return <Col xs='2'><Cards image={egg}/></Col>; 
       })
     );
   }
