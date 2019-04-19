@@ -25,6 +25,8 @@ export default class Fetch extends Component {
       cardsNumber = 16;
     } else if (difficultyLevel === 3) {
       cardsNumber = 32;
+    } else {
+      cardsNumber = 64;
     }
     let eggsIReallyWant = [];
 
@@ -33,16 +35,22 @@ export default class Fetch extends Component {
         eggsIReallyWant.push(this.state.eggs.data[Math.floor(Math.random() * this.state.eggs.data.length)].image);
       }
     }
+
     this.setState({eggsIWant: eggsIReallyWant, isFiltered : true});
-    console.log('I run l15 func and eggsIrlywant.length = ' + eggsIReallyWant.length);
+    console.log('I run l19 func and eggsIrlywant.length = ' + eggsIReallyWant.length);
+    console.log(this.state.isFiltered);
+
+    this.makePairs(eggsIReallyWant);
   }
 
   componentDidMount = () => {
     axios.get('http://easteregg.wildcodeschool.fr/api/eggs')
-      .then(data => this.setState({ eggs: data }))
+      .then( (data) => {
+        this.setState({ eggs: data, loading: false });
+      })
       .catch(error => console.log(error));
     this.getArrayOfX(1);
-    this.makePairs(this.state.eggsIWant);
+    console.log(this.state.eggsIWant + ' are eggsIWant (cdm l48)');
   }
 
   makePairs(array){
@@ -51,20 +59,17 @@ export default class Fetch extends Component {
       duplicatedArray.push(array[i], array[i]);
     }
     this.setState({duplicatedEggs : duplicatedArray});
+    console.log('I ran func makePairs.');
   }
 
   render() {
-    if (this.state.loading) {
-      setTimeout(() => {
-        this.setState({ loading: false });
-      }, 500);
+    if (this.state.loading ) {
       return <Spinner color="primary" />;
     }
     
     return (
-    
-      this.state.eggs.data.map((egg) => {
-        return <Cards image={egg.image}/>; 
+      this.state.eggs.data.map((egg, index) => {
+        return <img src={egg.image} alt='noAlternative' key={index}></img>;
       })
     );
   }
