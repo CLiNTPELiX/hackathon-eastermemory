@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container, Col, Row, Button, ButtonGroup } from 'reactstrap';
 import GameMain from '../GameMain/GameMain';
 import './GameInit.css';
+import EasterEgg from '../EasterEgg/EasterEgg';
 
 export default class GameInit extends Component {
   constructor(props) {
@@ -31,6 +32,10 @@ export default class GameInit extends Component {
     this.setState({ rSelected });
   }
 
+  handleClick(){
+    return <EasterEgg />;
+  }
+
   render() {
     
     if (this.state.isPlayerReady === true) {
@@ -38,15 +43,15 @@ export default class GameInit extends Component {
     }
     return (
       <div className="myBackground">
-        <Container >
+        <Container className="colorFont">
           <Row >
 
             <Col xs='12'>
-              <h1 onClick={() => this.handleClick} className="mainTitle">Welcome</h1>
+              <h1 onDoubleClick={() => this.handleClick} className="mainTitle">Welcome</h1>
             </Col>
 
             <Col xs='12'>
-              <h3 className="gameInitText">Choose your level (default is 1)</h3>
+              <h3 className="gameInitText">Choose your level <em>(default is 1)</em></h3>
             </Col>
 
             <Col xs='12'>
@@ -59,7 +64,7 @@ export default class GameInit extends Component {
             </Col>
 
             <Col xs='12'>
-              <h3 className="gameInitText">Enter your name (default is Player)</h3>
+              <h3 className="gameInitText">Enter your name <em>(default is Player)</em></h3>
             </Col>
 
             <Col xs='12'>
@@ -78,6 +83,7 @@ export default class GameInit extends Component {
                     <input
                       type="submit"
                       value="OK"
+                      className="myOkButton"
                     />
                   </div>
                 </fieldset>

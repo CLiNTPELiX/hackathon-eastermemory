@@ -1,11 +1,11 @@
-body {
+.body {
     width: 100vw;
     height: 100vh;
     position: relative;
     background: linear-gradient(45deg, #eaf679, #adcbd5);
 }
 
-body .outer {
+.body .outer {
     position: absolute;
     background: #984cb6;
     width: 700px;
@@ -16,7 +16,7 @@ body .outer {
     box-shadow: 0px 20px 50px -20px #201026;
 }
 
-body .outer:before {
+.body .outer:before {
     content: "";
     position: absolute;
     width: 150px;
@@ -55,7 +55,7 @@ body .outer:before {
     }
 }
 
-body .egg {
+.body .egg {
     position: absolute;
     width: 80px;
     height: 100px;
@@ -81,14 +81,14 @@ body .egg {
     }
 }
 
-body .egg:first-of-type {
+.body .egg:first-of-type {
     -webkit-animation-delay: -2s;
     animation-delay: -2s;
     -webkit-animation-duration: 5s;
     animation-duration: 5s;
 }
 
-body .egg:nth-of-type(2) {
+.body .egg:nth-of-type(2) {
     -webkit-animation-delay: -1s;
     animation-delay: -1s;
     -webkit-animation-duration: 6s;
@@ -99,13 +99,13 @@ body .egg:nth-of-type(2) {
     transform: scale(0.85);
 }
 
-body .egg:nth-of-type(2):before {
+.body .egg:nth-of-type(2):before {
     background: linear-gradient(135deg, #fff 25%, transparent 25%) -50px 0, linear-gradient(225deg, #fff 25%, transparent 25%) -50px 0, linear-gradient(315deg, #fff 25%, transparent 25%), linear-gradient(45deg, #fff 25%, transparent 25%);
     background-size: 20px 100px;
     background-color: #b33b9b;
 }
 
-body .egg:nth-of-type(3) {
+.body .egg:nth-of-type(3) {
     margin-top: 125px;
     z-index: 2;
     opacity: 1;
@@ -113,12 +113,12 @@ body .egg:nth-of-type(3) {
     transform: scale(1);
 }
 
-body .egg:nth-of-type(3):before {
+.body .egg:nth-of-type(3):before {
     background: radial-gradient(circle at center, #eaf679 5px, #fff 5px);
     background-size: 20px 20px;
 }
 
-body .egg:after {
+.body .egg:after {
     content: "";
     position: absolute;
     width: 80%;
@@ -129,7 +129,7 @@ body .egg:after {
     border-radius: 100%;
 }
 
-body .egg:before {
+.body .egg:before {
     content: "";
     border-radius: 200px 200px 200px 200px / 300px 300px 200px 200px;
     position: absolute;
@@ -168,7 +168,7 @@ body .egg:before {
     }
 }
 
-body .container {
+.body .container {
     width: 550px;
     height: 300px;
     margin-left: -100px;
@@ -194,7 +194,7 @@ body .container {
     }
 }
 
-body .trail {
+.body .trail {
     width: 100px;
     height: 100px;
     margin-left: 200px;
@@ -247,57 +247,57 @@ body .trail {
     }
 }
 
-body .trail:nth-of-type(1) {
+.body .trail:nth-of-type(1) {
     -webkit-animation-delay: 0.0066666667s;
     animation-delay: 0.0066666667s;
 }
 
-body .trail:nth-of-type(2) {
+.body .trail:nth-of-type(2) {
     -webkit-animation-delay: 0.0133333333s;
     animation-delay: 0.0133333333s;
 }
 
-body .trail:nth-of-type(3) {
+.body .trail:nth-of-type(3) {
     -webkit-animation-delay: 0.02s;
     animation-delay: 0.02s;
 }
 
-body .trail:nth-of-type(4) {
+.body .trail:nth-of-type(4) {
     -webkit-animation-delay: 0.0266666667s;
     animation-delay: 0.0266666667s;
 }
 
-body .trail:nth-of-type(5) {
+.body .trail:nth-of-type(5) {
     -webkit-animation-delay: 0.0333333333s;
     animation-delay: 0.0333333333s;
 }
 
-body .trail:nth-of-type(6) {
+.body .trail:nth-of-type(6) {
     -webkit-animation-delay: 0.04s;
     animation-delay: 0.04s;
 }
 
-body .trail:nth-of-type(7) {
+.body .trail:nth-of-type(7) {
     -webkit-animation-delay: 0.0466666667s;
     animation-delay: 0.0466666667s;
 }
 
-body .trail:nth-of-type(8) {
+.body .trail:nth-of-type(8) {
     -webkit-animation-delay: 0.0533333333s;
     animation-delay: 0.0533333333s;
 }
 
-body .trail:nth-of-type(9) {
+.body .trail:nth-of-type(9) {
     -webkit-animation-delay: 0.06s;
     animation-delay: 0.06s;
 }
 
-body .trail:nth-of-type(10) {
+.body .trail:nth-of-type(10) {
     -webkit-animation-delay: 0.0666666667s;
     animation-delay: 0.0666666667s;
 }
 
-body .wrap {
+.body .wrap {
     width: 100px;
     height: 100px;
     margin-left: 200px;
@@ -311,7 +311,7 @@ body .wrap {
     animation: jump 2s ease-in-out infinite;
 }
 
-body .wrap .inner {
+.body .wrap .inner {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -357,7 +357,7 @@ body .wrap .inner {
     }
 }
 
-body .wrap .body {
+.body .wrap .innerBody {
     position: absolute;
     width: 110%;
     height: 110%;
@@ -401,7 +401,7 @@ body .wrap .body {
     }
 }
 
-body .wrap .body:after {
+.body .wrap .innerBody:after {
     content: "";
     position: absolute;
     bottom: 30px;
@@ -414,7 +414,7 @@ body .wrap .body:after {
     animation: compress 2s ease-in-out infinite;
 }
 
-body .wrap .body .arm {
+.body .wrap .innerBody .arm {
     content: "";
     position: absolute;
     width: 50px;
@@ -429,7 +429,7 @@ body .wrap .body .arm {
     transform: rotate(-60deg);
 }
 
-body .wrap .body .arm:before {
+.body .wrap .innerBody .arm:before {
     content: "";
     position: absolute;
     width: 12px;
@@ -439,7 +439,7 @@ body .wrap .body .arm:before {
     bottom: -3px;
 }
 
-body .wrap .foot {
+.body .wrap .foot {
     width: 80px;
     height: 20px;
     position: absolute;
@@ -487,7 +487,7 @@ body .wrap .foot {
     }
 }
 
-body .wrap .head {
+.body .wrap .head {
     position: absolute;
     width: 90px;
     height: 90px;
@@ -536,7 +536,7 @@ body .wrap .head {
     }
 }
 
-body .wrap .head:before {
+.body .wrap .head:before {
     content: "";
     position: absolute;
     width: 15px;
@@ -547,7 +547,7 @@ body .wrap .head:before {
     background: #d57fc4;
 }
 
-body .wrap .head .ears {
+.body .wrap .head .ears {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -611,7 +611,7 @@ body .wrap .head .ears {
     }
 }
 
-body .wrap .head .ears:nth-of-type(2) {
+.body .wrap .head .ears:nth-of-type(2) {
     right: 50px;
     z-index: -1;
     -webkit-animation: bend2 2s ease-in-out infinite;
@@ -678,11 +678,11 @@ body .wrap .head .ears:nth-of-type(2) {
     }
 }
 
-body .wrap .head .ears:nth-of-type(2) .innerear {
+.body .wrap .head .ears:nth-of-type(2) .innerear {
     background: #adcbd5;
 }
 
-body .wrap .head .ears .innerear {
+.body .wrap .head .ears .innerear {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -692,7 +692,7 @@ body .wrap .head .ears .innerear {
     left: -10px;
 }
 
-body .wrap .head .ears .innerear:nth-of-type(1) {
+.body .wrap .head .ears .innerear:nth-of-type(1) {
     -webkit-transform-origin: -40px 75%;
     transform-origin: -40px 75%;
     -webkit-animation: spring1 2s ease-in-out infinite;
@@ -755,7 +755,7 @@ body .wrap .head .ears .innerear:nth-of-type(1) {
     }
 }
 
-body .wrap .head .ears .innerear:nth-of-type(2) {
+.body .wrap .head .ears .innerear:nth-of-type(2) {
     -webkit-transform-origin: -40px 75%;
     transform-origin: -40px 75%;
     -webkit-animation: spring2 2s ease-in-out infinite;
@@ -818,7 +818,7 @@ body .wrap .head .ears .innerear:nth-of-type(2) {
     }
 }
 
-body .wrap .head .ears .innerear:nth-of-type(3) {
+.body .wrap .head .ears .innerear:nth-of-type(3) {
     -webkit-transform-origin: -40px 75%;
     transform-origin: -40px 75%;
     -webkit-animation: spring3 2s ease-in-out infinite;
@@ -881,7 +881,7 @@ body .wrap .head .ears .innerear:nth-of-type(3) {
     }
 }
 
-body .wrap .head .ears .innerear:nth-of-type(4) {
+.body .wrap .head .ears .innerear:nth-of-type(4) {
     -webkit-transform-origin: -40px 75%;
     transform-origin: -40px 75%;
     -webkit-animation: spring4 2s ease-in-out infinite;
@@ -944,7 +944,7 @@ body .wrap .head .ears .innerear:nth-of-type(4) {
     }
 }
 
-body .wrap .head .ears .innerear:nth-of-type(5) {
+.body .wrap .head .ears .innerear:nth-of-type(5) {
     -webkit-transform-origin: -40px 75%;
     transform-origin: -40px 75%;
     -webkit-animation: spring5 2s ease-in-out infinite;
@@ -1007,7 +1007,7 @@ body .wrap .head .ears .innerear:nth-of-type(5) {
     }
 }
 
-body .wrap .head .ears .innerear:nth-of-type(6) {
+.body .wrap .head .ears .innerear:nth-of-type(6) {
     -webkit-transform-origin: -40px 75%;
     transform-origin: -40px 75%;
     -webkit-animation: spring6 2s ease-in-out infinite;
@@ -1070,7 +1070,7 @@ body .wrap .head .ears .innerear:nth-of-type(6) {
     }
 }
 
-body .wrap .head .ears .innerear:nth-of-type(7) {
+.body .wrap .head .ears .innerear:nth-of-type(7) {
     -webkit-transform-origin: -40px 75%;
     transform-origin: -40px 75%;
     -webkit-animation: spring7 2s ease-in-out infinite;
@@ -1133,7 +1133,7 @@ body .wrap .head .ears .innerear:nth-of-type(7) {
     }
 }
 
-body .wrap .head .ears .innerear:nth-of-type(8) {
+.body .wrap .head .ears .innerear:nth-of-type(8) {
     -webkit-transform-origin: -40px 75%;
     transform-origin: -40px 75%;
     -webkit-animation: spring8 2s ease-in-out infinite;
@@ -1196,7 +1196,7 @@ body .wrap .head .ears .innerear:nth-of-type(8) {
     }
 }
 
-body .wrap .head .ears .innerear:nth-of-type(9) {
+.body .wrap .head .ears .innerear:nth-of-type(9) {
     -webkit-transform-origin: -40px 75%;
     transform-origin: -40px 75%;
     -webkit-animation: spring9 2s ease-in-out infinite;
@@ -1259,7 +1259,7 @@ body .wrap .head .ears .innerear:nth-of-type(9) {
     }
 }
 
-body .wrap .head .ears .innerear:nth-of-type(10) {
+.body .wrap .head .ears .innerear:nth-of-type(10) {
     -webkit-transform-origin: -40px 75%;
     transform-origin: -40px 75%;
     -webkit-animation: spring10 2s ease-in-out infinite;
@@ -1322,7 +1322,7 @@ body .wrap .head .ears .innerear:nth-of-type(10) {
     }
 }
 
-body .wrap .head .ears .innerear:nth-of-type(11) {
+.body .wrap .head .ears .innerear:nth-of-type(11) {
     -webkit-transform-origin: -40px 75%;
     transform-origin: -40px 75%;
     -webkit-animation: spring11 2s ease-in-out infinite;
@@ -1385,7 +1385,7 @@ body .wrap .head .ears .innerear:nth-of-type(11) {
     }
 }
 
-body .wrap .head .ears .innerear:nth-of-type(12) {
+.body .wrap .head .ears .innerear:nth-of-type(12) {
     -webkit-transform-origin: -40px 75%;
     transform-origin: -40px 75%;
     -webkit-animation: spring12 2s ease-in-out infinite;
@@ -1448,7 +1448,7 @@ body .wrap .head .ears .innerear:nth-of-type(12) {
     }
 }
 
-body .wrap .head .ears .innerear:nth-of-type(13) {
+.body .wrap .head .ears .innerear:nth-of-type(13) {
     -webkit-transform-origin: -40px 75%;
     transform-origin: -40px 75%;
     -webkit-animation: spring13 2s ease-in-out infinite;
@@ -1511,7 +1511,7 @@ body .wrap .head .ears .innerear:nth-of-type(13) {
     }
 }
 
-body .wrap .head .ears .innerear:nth-of-type(14) {
+.body .wrap .head .ears .innerear:nth-of-type(14) {
     -webkit-transform-origin: -40px 75%;
     transform-origin: -40px 75%;
     -webkit-animation: spring14 2s ease-in-out infinite;
@@ -1574,7 +1574,7 @@ body .wrap .head .ears .innerear:nth-of-type(14) {
     }
 }
 
-body .wrap .head .ears .innerear:nth-of-type(15) {
+.body .wrap .head .ears .innerear:nth-of-type(15) {
     -webkit-transform-origin: -40px 75%;
     transform-origin: -40px 75%;
     -webkit-animation: spring15 2s ease-in-out infinite;
@@ -1637,7 +1637,7 @@ body .wrap .head .ears .innerear:nth-of-type(15) {
     }
 }
 
-body .wrap .head .ears .innerear:nth-of-type(16) {
+.body .wrap .head .ears .innerear:nth-of-type(16) {
     -webkit-transform-origin: -40px 75%;
     transform-origin: -40px 75%;
     -webkit-animation: spring16 2s ease-in-out infinite;
@@ -1700,7 +1700,7 @@ body .wrap .head .ears .innerear:nth-of-type(16) {
     }
 }
 
-body .wrap .head .ears .innerear:nth-of-type(17) {
+.body .wrap .head .ears .innerear:nth-of-type(17) {
     -webkit-transform-origin: -40px 75%;
     transform-origin: -40px 75%;
     -webkit-animation: spring17 2s ease-in-out infinite;
@@ -1763,7 +1763,7 @@ body .wrap .head .ears .innerear:nth-of-type(17) {
     }
 }
 
-body .wrap .head .ears .innerear:nth-of-type(18) {
+.body .wrap .head .ears .innerear:nth-of-type(18) {
     -webkit-transform-origin: -40px 75%;
     transform-origin: -40px 75%;
     -webkit-animation: spring18 2s ease-in-out infinite;
@@ -1826,7 +1826,7 @@ body .wrap .head .ears .innerear:nth-of-type(18) {
     }
 }
 
-body .wrap .head .ears .innerear:nth-of-type(19) {
+.body .wrap .head .ears .innerear:nth-of-type(19) {
     -webkit-transform-origin: -40px 75%;
     transform-origin: -40px 75%;
     -webkit-animation: spring19 2s ease-in-out infinite;
@@ -1889,7 +1889,7 @@ body .wrap .head .ears .innerear:nth-of-type(19) {
     }
 }
 
-body .wrap .head .ears .innerear:nth-of-type(20) {
+.body .wrap .head .ears .innerear:nth-of-type(20) {
     -webkit-transform-origin: -40px 75%;
     transform-origin: -40px 75%;
     -webkit-animation: spring20 2s ease-in-out infinite;
