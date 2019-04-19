@@ -20,7 +20,7 @@ export default class Cards extends Component {
           }}
           src={this.state.isHidden? myCardBack : this.props.image} 
           alt={this.props.image} 
-          height="100px"></img>
+          height="100px" width="80px"></img>
       </div>
     );
   }

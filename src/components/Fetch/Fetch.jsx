@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Spinner } from 'reactstrap';
+import { Spinner, Col } from 'reactstrap';
 import Cards from '../Cards/Cards';
+
 export default class Fetch extends Component {
 
   constructor(props) {
@@ -64,7 +65,7 @@ export default class Fetch extends Component {
     return (
     
       this.state.eggs.data.map((egg) => {
-        return <Cards image={egg.image}/>; 
+        return <Col xs='2'><Cards image={egg.image}/></Col>; 
       })
     );
   }
