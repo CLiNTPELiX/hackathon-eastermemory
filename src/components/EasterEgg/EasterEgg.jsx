@@ -4,7 +4,7 @@ import './EasterEgg.css';
 export default class EasterEgg extends Component {
   render() {
     return (
-      <div>
+      <div className='body'>
 
         <div className='outer'>
           <div className='egg'></div>
@@ -13,7 +13,7 @@ export default class EasterEgg extends Component {
           <div className='container'>
             <div className='trail'></div>
             <div className='wrap'>
-              <div className='body'>
+              <div className='innerBody'>
                 <div className='arm'></div>
                 <div className='foot'></div>
                 <div className='head'>

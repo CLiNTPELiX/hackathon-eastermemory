@@ -36,7 +36,7 @@ export default class Fetch extends Component {
         console.log('in for loop l34 (getArrayofX method)');
       }
     }
-
+    console.log(eggsArrIReallyWant + ' = eggsArrIReallyWant inside getArr method');
     this.setState({eggsIWant: eggsArrIReallyWant, isFiltered : true});
     console.log('I run l19 func and eggsIrlywant.length = ' + eggsArrIReallyWant.length);
     console.log(this.state.isFiltered);
