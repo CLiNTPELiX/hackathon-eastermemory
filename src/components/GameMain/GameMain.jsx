@@ -10,7 +10,7 @@ export default class GameMain extends Component {
     return (
       <div className="Mybody">
         <Navbar text={this.props.playerName} number={this.props.difficultyLevel} />
-        <Container fluid  className="bgrd">
+        <Container fluid className="bgrd">
           <Row> <Fetch /></Row>
          
         </Container>
