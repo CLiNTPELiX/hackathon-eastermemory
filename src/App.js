@@ -15,8 +15,9 @@ class App extends Component {
       
       <div className="App">
         <Switch>
-          <Route path='/play' component={GameMain} />
-          <Route path='/' component={GameInit} />
+          <Route exact path='/play' component={GameMain} />
+          <Route exact path='/' component={GameInit} />
+          {/* <Route exact path='/easteregg' componenent={EasterEgg} /> */}
         </Switch>
         <Footer />
       </div>
