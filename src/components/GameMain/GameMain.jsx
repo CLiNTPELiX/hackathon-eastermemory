@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import './GameMain.css';
 import Navbar from '../Navbar/Navbar';
+
+import './GameMain.css';
 
 export default class GameMain extends Component{
   constructor(props){
@@ -24,7 +25,8 @@ export default class GameMain extends Component{
 
           <h1>{this.props.difficultyLevel}</h1>
         </Row>
-      </Container> 
+      </Container>
+      
     );
   }
 }
