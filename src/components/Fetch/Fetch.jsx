@@ -39,7 +39,7 @@ export default class Fetch extends Component {
     axios.get('http://easteregg.wildcodeschool.fr/api/eggs')
       .then(data => this.setState({ eggs: data }))
       .catch(error => console.log(error));
-    this.getArrayOfX(2);
+    this.getArrayOfX(1);
   }
 
   render() {
@@ -54,6 +54,7 @@ export default class Fetch extends Component {
       console.log(this.state.eggsIWant + ' want'),
       console.log(this.state.eggsIReallyWant + ' really want'),
       this.state.eggs.data.map((egg) => {
+        // return;
         return <img src={egg.image} alt='noAlternative'></img>;
       })
     );
