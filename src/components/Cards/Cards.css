@@ -2,4 +2,5 @@
     border-color: black !important;
     border: solid 0.1em !important;
     display: inline-block;
+    margin: 20px;
 }

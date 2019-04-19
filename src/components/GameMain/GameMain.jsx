@@ -3,18 +3,19 @@ import './GameMain.css';
 import Navbar from '../Navbar/Navbar';
 import Fetch from '../Fetch/Fetch';
 import {Container, Row} from 'reactstrap';
+import './GameMain.css';
 
 export default class GameMain extends Component {
   render() {
     return (
-      <React.Fragment>
+      <div className="Mybody">
         <Navbar text={this.props.playerName} number={this.props.difficultyLevel} />
-        <Container>
+        <Container fluid  className="bgrd">
           <Row> <Fetch /></Row>
          
         </Container>
         
-      </React.Fragment>
+      </div>
     );
   }
 }
