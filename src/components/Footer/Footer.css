@@ -1,0 +1,105 @@
+.footer{
+    text-align:center;
+    position: static !important;
+    left: 0px !important;
+    bottom: 0px !important;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+/* Colors */
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+footer {
+  width: 100%;
+  display: inline-block;
+  margin: 0;
+  height: 70px;
+  background-color: rgb(237, 149, 149);
+}
+footer .copyright {
+  width: 50%;
+  float: left;
+}
+@media (max-width: 600px) {
+  footer .copyright {
+    width: 100%;
+  }
+}
+footer .copyright p {
+  padding-left: 10%;
+  color: white;
+  font-size: 0.7em;
+  line-height: 70px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+@media (max-width: 600px) {
+  footer .copyright p {
+    text-align: center;
+    padding: 0;
+  }
+}
+footer .social {
+  width: 50%;
+  float: right;
+}
+@media (max-width: 600px) {
+  footer .social {
+    width: 100%;
+  }
+}
+footer .social a {
+  float: left;
+  line-height: 70px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  -moz-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  -webkit-transition: all, 0.3s;
+  transition: all, 0.3s;
+}
+footer .social a:hover {
+  background-color: rgb(122, 216, 82);
+  -moz-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  -webkit-transition: all, 0.3s;
+  transition: all, 0.3s;
+}
+
+.linked {
+  background-color: #1E83AE;
+  font-size: 1.2em;
+  width: 20%;
+}
+
+.face {
+  background-color: #3D5B94;
+  font-size: 1.2em;
+  width: 20%;
+}
+
+.tweet {
+  background-color: rgb(82, 196, 245);
+  font-size: 1.2em;
+  width: 20%;
+}
+
+.support {
+  background-color: #bc63e8;
+  font-size: 0.8em;
+  width: 40%;
+}
+p{
+    font-size: 20px !important;
+}
+.support{
+    font-size: 20px !important;
+}

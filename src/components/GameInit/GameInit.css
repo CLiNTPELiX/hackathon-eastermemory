@@ -1,0 +1,26 @@
+.myBackground {
+  width: 100%;
+  height: 100vh;
+  background-image: url('https://www.burtshotel.co.uk/wp-content/uploads/2016/03/easter-eggs.jpg');
+  background-size: 100% 100%
+}
+
+.myButton {
+  margin-right: 30px;
+  border-radius:50% !important;
+  height: 8rem !important
+}
+
+.myOkButton {
+  width: 15% !important;
+  margin-top: 5px
+}
+.colorFont{
+  background-color: rgb(206, 245, 245);
+  width: 350px !important;
+  height: 450px !important;
+  border-radius: 50px;
+}
+.mainTitle{
+  font-size: 50px;
+}
