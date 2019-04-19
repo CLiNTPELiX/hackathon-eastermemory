@@ -13,7 +13,6 @@ export default class Fetch extends Component {
       isFiltered: false,
       difficultyLevel: 3
     };
-    
   }
 
   getArrayOfX(difficultyLevel){
