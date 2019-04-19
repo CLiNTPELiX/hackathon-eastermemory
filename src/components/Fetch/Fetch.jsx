@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Spinner } from 'reactstrap';
+import Cards from '../Cards/Cards';
+
 export default class Fetch extends Component {
 
   constructor(props) {
@@ -11,7 +13,7 @@ export default class Fetch extends Component {
       eggsIWant:[],
       duplicatedEggs: [],
       isFiltered: false,
-      difficultyLevel: 3
+      difficultyLevel: this.props.difficultyLevel
     };
   }
 
@@ -47,7 +49,7 @@ export default class Fetch extends Component {
         this.setState({ eggs: data, loading: false });
       })
       .catch(error => console.log(error));
-    this.getArrayOfX(1);
+    this.getArrayOfX(this.state.difficultyLevel);
     console.log(this.state.eggsIWant + ' are eggsIWant (cdm l48)');
   }
 
@@ -66,13 +68,10 @@ export default class Fetch extends Component {
     }
     
     return (
-      this.state.eggs.data.map((egg, index) => {
-        return <img src={egg.image} alt='noAlternative' key={index}></img>;
+      this.state.duplicatedEggs.map((egg, index) => {
+        return <Cards image={egg.image} alt={index}/>;
       })
     );
   }
-      
-  // console.log(this.state.eggsIWant + ' want arr'),
-  // console.log(this.state.duplicatedEggs + ' duplicated arr')
 }
 
