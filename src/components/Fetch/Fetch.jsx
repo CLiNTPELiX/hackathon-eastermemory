@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Spinner } from 'reactstrap';
+import Cards from '../Cards/Cards';
 export default class Fetch extends Component {
 
   constructor(props) {
@@ -65,10 +66,15 @@ export default class Fetch extends Component {
     if (this.state.loading ) {
       return <Spinner color="primary" />;
     }
+    
     return (
       this.state.eggs.data.map((egg, index) => {
         return <img src={egg.image} alt='noAlternative' key={index}></img>;
       })
     );
   }
+      
+  // console.log(this.state.eggsIWant + ' want arr'),
+  // console.log(this.state.duplicatedEggs + ' duplicated arr')
 }
+
