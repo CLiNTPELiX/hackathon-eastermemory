@@ -10,7 +10,7 @@ export default class Fetch extends Component {
     this.state = {
       eggs: { data: [{ id: 1337, name: 'Dan', image: 'http://myimage' }] },
       loading: true,
-      eggsIWant:[],
+      eggsIWant: [],
       duplicatedEggs: [],
       isFiltered: false,
       difficultyLevel: this.props.difficultyLevel
@@ -28,19 +28,20 @@ export default class Fetch extends Component {
     } else {
       cardsNumber = 64;
     }
-    let eggsIReallyWant = [];
+    let eggsArrIReallyWant = [];
 
     for (let i = 0; i < cardsNumber; i++){
       if (this.state.isFiltered === false) {
-        eggsIReallyWant.push(this.state.eggs.data[Math.floor(Math.random() * this.state.eggs.data.length)].image);
+        eggsArrIReallyWant.push(this.state.eggs.data[Math.floor(Math.random() * this.state.eggs.data.length)].image);
+        console.log('in for loop l34 (getArrayofX method)');
       }
     }
 
-    this.setState({eggsIWant: eggsIReallyWant, isFiltered : true});
-    console.log('I run l19 func and eggsIrlywant.length = ' + eggsIReallyWant.length);
+    this.setState({eggsIWant: eggsArrIReallyWant, isFiltered : true});
+    console.log('I run l19 func and eggsIrlywant.length = ' + eggsArrIReallyWant.length);
     console.log(this.state.isFiltered);
 
-    this.makePairs(eggsIReallyWant);
+    this.makePairs(eggsArrIReallyWant);
   }
 
   componentDidMount = () => {
@@ -50,7 +51,6 @@ export default class Fetch extends Component {
       })
       .catch(error => console.log(error));
     this.getArrayOfX(this.state.difficultyLevel);
-    console.log(this.state.eggsIWant + ' are eggsIWant (cdm l48)');
   }
 
   makePairs(array){
@@ -69,7 +69,7 @@ export default class Fetch extends Component {
     
     return (
       this.state.duplicatedEggs.map((egg, index) => {
-        return <Cards image={egg.image} alt={index}/>;
+        return <Cards image={egg.image} alt={index} key={index}/>;
       })
     );
   }
