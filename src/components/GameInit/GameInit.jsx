@@ -32,6 +32,7 @@ export default class GameInit extends Component {
   }
 
   render() {
+    
     if (this.state.isPlayerReady === true) {
       return <GameMain playerName={this.state.playerName} difficultyLevel={this.state.rSelected} />;
     }
@@ -41,7 +42,7 @@ export default class GameInit extends Component {
           <Row >
 
             <Col xs='12'>
-              <h1 className="mainTitle">Welcome</h1>
+              <h1 onClick={() => this.handleClick} className="mainTitle">Welcome</h1>
             </Col>
 
             <Col xs='12'>
