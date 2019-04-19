@@ -15,7 +15,6 @@ class App extends Component {
     return (
       
       <div className="App">
-        <Fetch />
         <Switch>
           <Route exact path='/play' component={GameMain} />
           <Route exact path='/' component={GameInit} />
