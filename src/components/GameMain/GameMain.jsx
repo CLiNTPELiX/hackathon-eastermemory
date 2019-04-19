@@ -5,11 +5,6 @@ import Fetch from '../Fetch/Fetch';
 import {Container, Row} from 'reactstrap';
 
 export default class GameMain extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-  }
   render() {
     return (
       <React.Fragment>
