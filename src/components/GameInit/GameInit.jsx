@@ -12,7 +12,8 @@ export default class GameInit extends Component {
       rSelected: 1,
       playerInput: '',
       playerName: '',
-      isPlayerReady: false
+      isPlayerReady: false,
+      title: 'Welcome'
     };
     this.onRadioBtnClick = this.onRadioBtnClick.bind(this);
     this.onChange = this.onChange.bind(this);
@@ -32,6 +33,10 @@ export default class GameInit extends Component {
     this.setState({ rSelected });
   }
 
+  handleClick(){
+    return this.setState({title: 'EASTEREGGS!!!!!'});
+  }
+
   render() {
     
     if (this.state.isPlayerReady === true) {
@@ -43,7 +48,7 @@ export default class GameInit extends Component {
           <Row >
 
             <Col xs='12'>
-              <h1 onDoubleClick={() => this.handleClick} className="mainTitle">Welcome</h1>
+              <h1 onClick={() => this.handleClick()} className="mainTitle">{this.state.title}</h1>
             </Col>
 
             <Col xs='12'>
