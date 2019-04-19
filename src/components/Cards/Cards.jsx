@@ -20,12 +20,8 @@ export default class Cards extends Component {
           }}
           src={this.state.isHidden? myCardBack : this.props.image} 
           alt={this.props.image} 
-          height="100px"
-          width='80px'></img>
+          height="150px" width="100px"></img>
       </div>
     );
   }
 }
-
-// onClick={() => {this.setState({clicked: true})} 
-//        src={'../../' + (this.state.clicked ? 'plus' : 'minus') + 'https://wild-marseille.slack.com/files/UFWTV5L30/FJ281RPTR/easter_egg.png'}}
